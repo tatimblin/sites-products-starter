@@ -19,7 +19,14 @@
         "price",
         "color",
         "brand",
-        "photoGallery"
+        "photoGallery",
+        "c_relatedProducts.name",
+        "c_relatedProducts.slug",
+        "c_relatedProducts.photoGallery",
+        "c_relatedProducts.brand",
+        "c_relatedProducts.price",
+        "c_relatedProducts.color",
+        "c_relatedProducts.richTextDescription"
       ],
       "localization": {
           "locales": ["en"]
@@ -66,6 +73,34 @@
                     </div>
                 </div>
             </div>
+            {{#if c_relatedProducts}}
+                <div class="uppercase tracking-wide no-underline hover:no-underline font-bold text-gray-600 text-3xl mb-8">Related Products</div>
+                {{#each c_relatedProducts}}
+                    <div class="grid grid-cols-7 divide-gray-300 divide-y-4 gap-3 pl-10">
+                        <div class="col-span-1">
+                            <div class="mb-5">
+                                {{>photoGallery this.photoGallery}}
+                            </div>
+                        </div>
+
+                        <div class="col-span-6">
+                            <div class="container py-8 px-6 mx-auto">
+                                <div>
+                                    <a class="uppercase tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-2xl mb-8 hover:text-blue-900" href={{this.slug}}>{{this.name}}</a>
+                                </div>
+                                <div class="uppercase tracking-wide no-underline hover:no-underline font-bold text-gray-600 text-xl mb-8 pt-6">
+                                    {{this.brand}} 
+                                </div>
+                                <div class="uppercase tracking-wide no-underline hover:no-underline font-bold text-gray-400 text-xl mb-8">
+                                    ${{this.price.value}}
+                                </div>
+                                <p class="mt-8 mb-8 text-l">{{convertRTFToHTML this.richTextDescription}}</p>
+                                <p class="mt-8 text-l"><b>Color:</b> {{this.color}}</p>
+                            </div>
+                        </div>
+                    </div>
+                {{/each}}
+            {{/if}}
     </body> 
 </div>
 
