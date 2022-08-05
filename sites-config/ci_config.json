@@ -10,7 +10,7 @@
         ],
         "plugins": [
             {
-                "pluginName": "pagesUrl",
+                "pluginName": "plugin-pagesUrl",
                 "sourceFiles": [
                     {
                         "root": "plugin-pagesUrl"
