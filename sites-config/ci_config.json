@@ -8,18 +8,6 @@
                 "root": "static"
             }
         ],
-        "plugins": [
-            {
-                "pluginName": "plugin-pagesUrl",
-                "sourceFiles": [
-                    {
-                        "root": "plugins/pagesURL"
-                    }
-                ],
-                "event": "ON_URL_CHANGE",
-                "functionName": "setPagesUrl"
-            }
-        ],
         "hbsTemplates": [
             { 
                 "root": "templates",
