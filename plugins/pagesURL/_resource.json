@@ -1,0 +1,7 @@
+{
+  "$id": "pagesUrl",
+  "$schema": "https://schema.yext.com/config/platform/plugin/v1",
+  "globals": {
+    "API_KEY": "6aefaa26b33c33aecd6b7fa65e8ae3a8"
+  }
+}

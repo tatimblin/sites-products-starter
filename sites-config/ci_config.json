@@ -13,7 +13,7 @@
                 "pluginName": "plugin-pagesUrl",
                 "sourceFiles": [
                     {
-                        "root": "plugin-pagesUrl"
+                        "root": "plugins/pagesURL"
                     }
                 ],
                 "event": "ON_URL_CHANGE",
